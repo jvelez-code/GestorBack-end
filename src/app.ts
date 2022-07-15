@@ -1,9 +1,9 @@
 import express from 'express';
-var body_parser = require('body-parser');
 import morgan from 'morgan';
 import cors from 'cors';
-import usuarioRouter from './routes/usuario.routes';
-import askEstadoExtensionRouter from './routes/askEstadoExtension.routes '
+
+
+import router from './routes/index.routes';
 
 
 
@@ -13,10 +13,11 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use(express.json());
-//app.use(body_parser.urlencoded({extended:true}));
-app.use(
-    usuarioRouter,
-    askEstadoExtensionRouter);
+// app.use(
+//     usuarioRouter,
+//     askEstadoExtensionRouter,
+//     authUsuarioRouter);
+ app.use(router)
 
 
 export default app;

@@ -1,4 +1,4 @@
-import { Console } from 'console';
+
 import { Request , Response } from 'express';
 import { resourceLimits } from 'worker_threads';
 import { Usuario } from '../entitie/usuario'

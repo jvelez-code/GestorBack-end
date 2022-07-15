@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm"; 
 import { Usuario } from "./entitie/usuario";
-import { askEstadoExtension } from "./entitie/ask_estado_extension"
+import { askEstadoExtension } from "./entitie/ask_estado_extension";
+import { AuthUsuario } from "./entitie/auth_usuario"
 
 export const DataSourceGestor = new DataSource({
 
@@ -12,7 +13,7 @@ export const DataSourceGestor = new DataSource({
     database: "gestorclientes20210204",
     synchronize: false,
     logging: true,
-    entities: [Usuario ],
+    entities: [Usuario, AuthUsuario ],
     subscribers: [],
     migrations: []
     // type: "postgres",

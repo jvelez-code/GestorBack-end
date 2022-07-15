@@ -6,11 +6,11 @@ import {
     deleteUsuario
       } from '../controller/usuario.controller'
 
-
+      
 const router = Router();
 
-router.get('/prueba', selectUsuario );
-router.post('/prueba', insertUsuario );
-router.put('/prueba/:id', updateUsuario );
-router.delete('/prueba/:id',deleteUsuario);
+router.get('/', selectUsuario );
+router.post('/', insertUsuario );
+router.put('/:id', updateUsuario );
+router.delete('/:id',deleteUsuario);
 export default router;
